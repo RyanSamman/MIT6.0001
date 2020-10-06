@@ -2,7 +2,7 @@
 """
 Created on Tue Oct  6 12:47:22 2020
 
-@author: GoldS
+@author: RyanS
 """
 
 PORTION_DOWN_PAYMENT = 0.25
@@ -24,3 +24,4 @@ while current_savings < total_cost * PORTION_DOWN_PAYMENT:
     months += 1 
     
 print(months)
+print(current_savings)

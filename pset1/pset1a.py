@@ -2,7 +2,7 @@
 """
 Created on Tue Oct  6 12:47:22 2020
 
-@author: GoldS
+@author: RyanS
 """
 
 PORTION_DOWN_PAYMENT = 0.25
