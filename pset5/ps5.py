@@ -130,6 +130,9 @@ class PhraseTrigger(Trigger):
             return False
 
         return True
+    
+    def __repr__(self) -> str:
+        return f"{self.__class__.__name__}({repr(self.phrase)})"
 
 # Problem 3
 # TODO: TitleTrigger
@@ -162,6 +165,10 @@ class TimeTrigger(Trigger):
         date = date.replace(tzinfo=pytz.timezone("EST"))
         self.date = date
 
+    def __repr__(self) -> str:
+        return f"{self.__class__.__name__}({repr(self.date)})"
+        
+
 # Problem 6
 # TODO: BeforeTrigger and AfterTrigger
 class BeforeTrigger(TimeTrigger):
@@ -192,6 +199,9 @@ class NotTrigger(Trigger):
     def evaluate(self, story):
         return not self.compositeTrigger.evaluate(story)
 
+    def __repr__(self):
+        return f"{self.__class__.__name__}({repr(self.compositeTrigger)})"
+
 # Problem 8
 # TODO: AndTrigger
 class AndTrigger(Trigger):
@@ -204,6 +214,9 @@ class AndTrigger(Trigger):
         isTriggered2 = self.trigger2.evaluate(story)
         return isTriggered1 and isTriggered2
 
+    def __repr__(self):
+        return f"{self.__class__.__name__}({repr(self.trigger1)}, {repr(self.trigger2)})"
+
 # Problem 9
 # TODO: OrTrigger
 class OrTrigger(Trigger):
@@ -215,6 +228,9 @@ class OrTrigger(Trigger):
         isTriggered1 = self.trigger1.evaluate(story)
         isTriggered2 = self.trigger2.evaluate(story)
         return isTriggered1 or isTriggered2
+
+    def __repr__(self):
+        return f"{self.__class__.__name__}({repr(self.trigger1)}, {repr(self.trigger2)})"
 
 #======================
 # Filtering
@@ -312,6 +328,9 @@ def main_thread(master):
         # TODO: After implementing read_trigger_config, uncomment this line 
         triggerlist = read_trigger_config('triggers.txt')
         
+        print("Triggers:")
+        [print(repr(t)) for t in triggerlist]
+
         # HELPER CODE - you don't need to understand this!
         # Draws the popup window that displays the filtered stories
         # Retrieves and filters the stories from the RSS feeds

@@ -53,6 +53,25 @@ def binarySearch(target, l, h, steps=0):
     
 rate, steps = binarySearch(TARGET_SAVINGS, 0, DIVISION_RATE) # Division rate is also the max
 
+# More General Case Binary Search, pass in a function to modify it's behavior
+# def binarySearch(target, l, h, func, steps=0):
+#     m = l + (h - l) // 2 # Prevent overflows in other languages
+    
+#     value = func(m)
+
+#     if target == value:
+#         return value, steps
+#     elif l == h:
+#         return None, None
+#     elif target > value:
+#         return binarySearch(target, m + 1, h, steps + 1)
+#     elif target < value:
+#         return binarySearch(target, l, m, steps + 1)
+    
+rate, steps = binarySearch(TARGET_SAVINGS, 0, DIVISION_RATE) # Division rate is also the max
+
+
+
 if rate is None:
     print("It is not possible to pay down payment in three years")
 else:

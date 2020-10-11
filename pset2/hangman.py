@@ -132,6 +132,7 @@ def hangman(secret_word):
 	print(f"I am thinking of a word that is {len(chosenWord)} letters long.")
 	print(f"You have {remainingWarnings} warnings left.")
 
+	# Walrus Operator, won't work pre Python 3.8
 	while (lost := not is_word_guessed(chosenWord, lettersGuessed)) and remainingGuesses > 0:
 		
 		print("--------------")

@@ -3,6 +3,8 @@
 # Collaborators:
 # Time Spent: x:xx
 
+import time
+import timeit
 import string
 
 ### HELPER CODE ###
@@ -260,8 +262,19 @@ if __name__ == '__main__':
     assert a2[0] == d2[0]
     assert a2[1] == d2[1]
 
-    ciphertext3 = CiphertextMessage("Xoqy Tzcfsm wg o amhvwqoz qvofoqhsf qfsohsr cb hvs gdif ct o acasbh hc vszd qcjsf ob wbgittwqwsbhzm dzobbsr voqy. Vs vog pssb fsuwghsfsr tcf qzoggsg oh AWH hkwqs pstcfs, pih vog fsdcfhsrzm bsjsf doggsr oqzogg. Wh vog pssb hvs hforwhwcb ct hvs fsgwrsbhg ct Sogh Qoadig hc psqcas Xoqy Tzcfsm tcf o tsk bwuvhg soqv msof hc sriqohs wbqcawbu ghirsbhg wb hvs komg, asobg, obr shvwqg ct voqywbu.")
-    print('Actual Output:', d2 := ciphertext3.decrypt_message())
+    with open("story.txt", "r") as story:
+        storyText = story.__next__() # First Line of file
+
+    print('Cipher: ', storyText, sep="\n")
+
+    iTime = time.time()
+    ciphertext3 = CiphertextMessage(storyText)
+    print()
+
+    print('Decrypted Message: ', d2 := ciphertext3.decrypt_message()[1], sep="\n")
+
+    timeTaken = timeit.timeit(lambda: ciphertext3.decrypt_message(), number=5)
+    print(f"Average Time Taken: {timeTaken / 5:.4f}")
     # decrypted story
     '''
     'Jack Florey is a mythical character created on the spur of a moment to help cover an insufficiently planned hack. He has been registered for classes at MIT twice before, but has reportedly never passed aclass. It has been the tradition of the 

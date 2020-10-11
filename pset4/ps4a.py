@@ -8,25 +8,6 @@ from os import get_exec_path
 
 
 def get_permutations(sequence: str, i=1):
-    '''
-    Enumerate all permutations of a given string
-
-    sequence (string): an arbitrary string to permute. Assume that it is a
-    non-empty string.  
-
-    You MUST use recursion for this part. Non-recursive solutions will not be
-    accepted.
-
-    Returns: a list of all permutations of sequence
-
-    Example:
-    >>> get_permutations('abc')
-    ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']
-
-    Note: depending on your implementation, you may return the permutations in
-    a different order than what is listed here.
-    '''
-
     # TODO: Learn backtracking in detail
     if len(sequence) == 1:
         return [sequence]
@@ -60,6 +41,9 @@ if __name__ == '__main__':
     assert testPerms(get_permutations("a"), ["a"])
     assert testPerms(get_permutations("ab"), ["ab", "ba"])
     assert testPerms(get_permutations("abc"), ['abc', 'acb', 'bac', 'bca', 'cab', 'cba'])
-    print(get_permutations("abcdefghijklmnopqrstuvwxyz"))
     print("All tests pass!")
+
+    s = input("Get Permutations of: ")
+    print(get_permutations(s))
+
     
