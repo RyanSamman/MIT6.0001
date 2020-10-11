@@ -38,7 +38,9 @@ As an extra challenge, I decided to write the shortest possible code I can in ce
 [Back to Contents](#table-of-contents)
 ## Problem Set 2 - Day 3
 Implementing Hangman
+
 ![HangmanPic1](./images/Hangman1.png)
+
 ![HangmanPic2](./images/Hangman2.png)
 - Lots of list comprehensions and regular expressions
 - Making a program one function at a time
@@ -47,7 +49,9 @@ Implementing Hangman
 
 ## Problem Set 3 - Day 4
 Another Game, Scrabble
+
 ![ScrabblePic](./images/Scrabble.png)
+
 - Working with Dictionaries
 - More Dictionary/List Comprehensions
 - More Regular Expressions
@@ -61,12 +65,14 @@ This is where the course started getting interesting. However, I wouldn't reccom
 The First Problem was to **generate all permutations of a String**, [which has been haunting me since the beginning of the term](https://leetcode.com/explore/challenge/card/september-leetcoding-challenge/554/week-1-september-1st-september-7th/3445/). (Although I solved that problem, I used `itertools.permutations` to generate all the permutations for me)
 
 However, after a few hours I eventually figured it out, and I now know how to generate permutations.
+
 ![Permutations Picture](./images/Permutations.png)
 
 ### Caesar Encryption/Decryption
 Encryption via a shift key, and Decryption via brute forcing all keys.
 
 Decrypting a Caesar Cipher:
+
 ![Caesar Cipher](./images/CaesarCipher.png)
 
 ### Substitution Encryption/Decryption
