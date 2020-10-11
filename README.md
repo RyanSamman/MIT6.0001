@@ -95,8 +95,6 @@ Then, we created `Compound Triggers`, which include `NOT`, `AND`, and `OR` subcl
 
 Then, we parsed a [text file](./pset5/triggers.txt) to generate a trigger list which fit our needs.
 
-![Triggers](./images/triggers.png)
-
 <p align="center"><img src="./images/triggers.png" alt="Triggers"/></p>
 
 ```
