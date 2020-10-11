@@ -39,9 +39,10 @@ As an extra challenge, I decided to write the shortest possible code I can in ce
 ## Problem Set 2 - Day 3
 Implementing Hangman
 
-![HangmanPic1](./images/Hangman1.png)
+<p align="center"><img src="./images/Hangman1.png" alt="HangmanPic1"/></p>
 
-![HangmanPic2](./images/Hangman2.png)
+<p align="center"><img src="./images/Hangman2.png" alt="HangmanPic2"/></p>
+
 - Lots of list comprehensions and regular expressions
 - Making a program one function at a time
 
@@ -50,7 +51,7 @@ Implementing Hangman
 ## Problem Set 3 - Day 4
 Another Game, Scrabble
 
-![ScrabblePic](./images/Scrabble.png)
+<p align="center"><img src="./images/Scrabble.png" alt="ScrabblePic"/></p>
 
 - Working with Dictionaries
 - More Dictionary/List Comprehensions
@@ -66,14 +67,14 @@ The First Problem was to **generate all permutations of a String**, [which has b
 
 However, after a few hours I eventually figured it out, and I now know how to generate permutations.
 
-![Permutations Picture](./images/Permutations.png)
+<p align="center"><img src="./images/Permutations.png" alt="Permutations"/></p>
 
 ### Caesar Encryption/Decryption
 Encryption via a shift key, and Decryption via brute forcing all keys.
 
 Decrypting a Caesar Cipher:
 
-![Caesar Cipher](./images/CaesarCipher.png)
+<p align="center"><img src="./images/CaesarCipher.png" alt="Caesar Cipher"/></p>
 
 ### Substitution Encryption/Decryption
 Since 26 letters have `26!`, or `4.032914611 E+26` possible permutations, the key was limited to only vowels.
@@ -88,13 +89,15 @@ In my opinion, this Problem set applied Object Oriented Programming in a very pr
 
 This is done by creating several `Trigger` classes, which take a look at a News Story and returns `True` or `False`, depending on what kind of trigger it is.
 
-![Trigger Classes](./images/TriggerUML.png)
+<p align="center"><img src="./images/TriggerUML.png" alt="Trigger Classes"/></p>
 
 Then, we created `Compound Triggers`, which include `NOT`, `AND`, and `OR` subclasses. Each `Compound Trigger` take one or more `Triggers`, and returns `True` or `False` depending on the type and the `Triggers` it's composed of. 
 
 Then, we parsed a [text file](./pset5/triggers.txt) to generate a trigger list which fit our needs.
 
 ![Triggers](./images/triggers.png)
+
+<p align="center"><img src="./images/triggers.png" alt="Triggers"/></p>
 
 ```
 AndTrigger(NotTrigger(TitleTrigger('trump')), AfterTrigger(datetime.datetime(2020, 10, 1, 17, 0, 10, tzinfo=<StaticTzInfo 
@@ -103,6 +106,6 @@ AndTrigger(NotTrigger(TitleTrigger('trump')), AfterTrigger(datetime.datetime(202
 
 The pre-written code then takes the news stories, passes them through the triggers created and displays it.
 
-![Output](./images/output.png)
+<p align="center"><img src="./images/output.png" alt="Output"/></p>
 
 [Back to Contents](#table-of-contents)
